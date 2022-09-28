@@ -1,16 +1,13 @@
 const sumAll = function(a, b) {
-    if (typeof a != 'number' || typeof b != 'number' || a < 0) {
+    if (typeof a != 'number' || typeof b != 'number' || a < 0 || b < 0) {
         return 'ERROR';
     }
 
-    let min, max;
+    let min = a;
+    let max = b;
     let sum = 0;
 
-    if (a < b) {
-        min = a;
-        max = b;
-    }
-    else {
+    if (b < a) {
         min = b;
         max = a;
     }
